@@ -61,8 +61,10 @@ public class ListaEstudantes {
     *  que vai ser ordenada*/
     public void ordenarEstudantesPorNome(){
         listaEstudante.sort(Comparator.comparing(Estudante::getNome));
+
         for (Estudante e : listaEstudante){
             System.out.println(e.getNome());
         }
+
     }
 }
