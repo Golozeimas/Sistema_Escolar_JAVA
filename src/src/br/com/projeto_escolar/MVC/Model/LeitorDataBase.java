@@ -1,10 +1,10 @@
-package br.com.projeto_escolar.Codigo.Classes;
-
+package br.com.projeto_escolar.MVC.Model;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
-import br.com.projeto_escolar.Codigo.Metodos.ListaEstudantes;
+import br.com.projeto_escolar.MVC.Model.Estudante;
+import br.com.projeto_escolar.MVC.Model.*;
 
 public class LeitorDataBase {
     
@@ -28,7 +28,7 @@ public class LeitorDataBase {
                 int id = Integer.parseInt(campos[0].trim());
                 String nome = campos[1].trim();
 
-                le.adicionarEstudante(new Estudante(id, nome));
+                le.adicionarEstudante(new Estudante(id,nome));
 
             }
         } catch (Exception er) {
