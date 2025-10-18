@@ -1,21 +1,25 @@
 package br.com.projeto_escolar.Codigo.Classes;
 
-import br.com.projeto_escolar.Codigo.Métodos.ListaEstudantes;
+import br.com.projeto_escolar.Codigo.Metodos.ListaEstudantes;
 
 public class Main {
     public static void main(String[] args) {
-    Estudante estudante = new Estudante(1, "Mana");
-    Estudante estudante2 = new Estudante(2,"Beatriz");
-    Estudante estudante3 = new Estudante(3,"detheus");
+        //MAIN DO TESTE DE LEITURA DO ARQUIVO CSV
 
-    ListaEstudantes listaEstudantes = new ListaEstudantes();
+        // 1. Definir o caminho do arquivo CSV
+        //    Coloque o caminho do arquivo aqui (veja abaixo como ajustar se estiver na pasta "data")
+        String caminhoArq = "data/estudantes.csv"; // <-- AQUI você põe o caminho do CSV
 
-    listaEstudantes.adicionarEstudante(estudante);
+        // 2. Criar a lista de estudantes
+        ListaEstudantes lista = new ListaEstudantes();
 
-    listaEstudantes.adicionarEstudante(estudante2);
+        // 3. Chamar o método para ler o arquivo e carregar os estudantes
+        LeitorDataBase.lerArqEstudante(caminhoArq, lista);
 
-    listaEstudantes.adicionarEstudante(estudante3);
-
-    listaEstudantes.ordenarEstudantesPorNome();
+        // 4. Imprimir todos os estudantes
+        System.out.println("Lista de Estudantes carregados:");
+        for (Estudante e : lista.getEstudantes()) {
+            System.out.println(e);
+        }
     }
 }

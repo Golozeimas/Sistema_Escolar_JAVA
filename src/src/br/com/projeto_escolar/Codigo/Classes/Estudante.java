@@ -4,6 +4,12 @@ public class Estudante {
     private int id;
     private String nome;
 
+    @Override
+    public String toString() {
+     return "ID: " + id + ", Nome: " + nome;
+    }
+
+
     public Estudante(int id, String nome){
         this.id = id;
         this.nome = nome;

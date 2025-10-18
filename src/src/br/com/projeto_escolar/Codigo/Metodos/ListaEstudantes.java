@@ -1,4 +1,4 @@
-package br.com.projeto_escolar.Codigo.Métodos;
+package br.com.projeto_escolar.Codigo.Metodos;
 
 import br.com.projeto_escolar.Codigo.Classes.Estudante;
 
@@ -50,4 +50,11 @@ public class ListaEstudantes {
             System.out.println(e.getNome());
         }
     }
+
+
+    // Camada(metodos) de testes:
+    public List<Estudante> getEstudantes() {
+        return listaEstudante;
+    }
+    
 }
