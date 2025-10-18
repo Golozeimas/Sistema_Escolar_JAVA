@@ -1,10 +1,13 @@
-package br.com.projeto_escolar.MVC.Model;
+package br.com.projeto_escolar.Codigo.Classes;
 
 public class Estudante {
     private int id;
     private String nome;
 
-
+    public Estudante(int id, String nome){
+        this.id = id;
+        this.nome = nome;
+    }
     public int getId() {
         return id;
     }
@@ -21,8 +24,4 @@ public class Estudante {
         this.nome = nome;
     }
 
-    @Override
-    public String toString(){
-        return "id: " + id + " - " + "nome: " + nome;
-    }
 }
