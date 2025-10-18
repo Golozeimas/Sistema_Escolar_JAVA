@@ -4,7 +4,7 @@ public class Disciplina {
     private String codigo;
     private String nomeDisciplina;
 
-    public void setNomeDisciplina(String nomedisciplina){
+    public void setNomeDisciplina(String nomeDisciplina){
         this.nomeDisciplina = nomeDisciplina;
     }
 
