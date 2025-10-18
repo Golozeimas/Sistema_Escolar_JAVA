@@ -1,4 +1,4 @@
-package br.com.projeto_escolar.Codigo.Classes;
+package br.com.projeto_escolar.MVC.Model;
 
 public class Matricula{
     private String codigoDisciplina;
