@@ -1,5 +1,7 @@
 package br.com.projeto_escolar.MVC;
 
+import br.com.projeto_escolar.MVC.Model.CadastroDisciplina;
+import br.com.projeto_escolar.MVC.Model.Disciplina;
 import br.com.projeto_escolar.MVC.Model.Estudante;
 import br.com.projeto_escolar.MVC.Model.ListaEstudantes;
 
@@ -11,6 +13,17 @@ public class Main {
         Estudante estudante = new Estudante();
         Estudante estudante1 = new Estudante();
         Estudante estudante2 = new Estudante();
+
+        Disciplina matematica = new Disciplina();
+        CadastroDisciplina cadastroDisciplina = new CadastroDisciplina();
+
+        matematica.setCodigo("MAT101");
+        matematica.setNomeDisciplina("Matemética");
+
+        cadastroDisciplina.adicionarDisciplina(matematica);
+
+        cadastroDisciplina.verificarDisciplina("MAT101");
+
 
         estudante.setNome("Matheus");
         estudante.setId(1);
@@ -36,6 +49,7 @@ public class Main {
         System.out.println("============================================");
         listaEstudantes.removerEstudantePorId(2);
         listaEstudantes.removerEstudantePorId(1);
+
 
     }
 }
