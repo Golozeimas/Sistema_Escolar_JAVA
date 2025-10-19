@@ -1,6 +1,7 @@
 package br.com.projeto_escolar.MVC.Model;
 
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Set;
 
 public class CadastroDisciplina {
@@ -17,6 +18,19 @@ public class CadastroDisciplina {
             }
         }
         return false;
+    }
+
+    public void removerDisciplina(String codigo){
+        Iterator<Disciplina> disciplinaIterator = disciplinas.iterator();
+        while (disciplinaIterator.hasNext()){
+            Disciplina disciplina = disciplinaIterator.next();
+            if (disciplina.getCodigo().equals(codigo)){
+                disciplinaIterator.remove();
+                System.out.println(disciplina.getNomeDisciplina());
+                System.out.println(disciplina.getCodigo());
+                System.out.println("removendo...");
+            }
+        }
     }
 
 }
