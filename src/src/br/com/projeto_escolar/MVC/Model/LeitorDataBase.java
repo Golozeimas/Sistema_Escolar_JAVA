@@ -1,12 +1,10 @@
 package br.com.projeto_escolar.MVC.Model;
 import java.io.BufferedReader;
-import java.io.FileReader;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
 
-import javax.smartcardio.CardChannel;
-
-import br.com.projeto_escolar.MVC.Model.Estudante;
-import br.com.projeto_escolar.MVC.Model.*;
 
 public class LeitorDataBase {
     
@@ -14,7 +12,8 @@ public class LeitorDataBase {
     public static void lerArqEstudante(String caminhoArq, ListaEstudantes le){
         //OBS: O buffereader carrega todo o arquivo na memória, é útil somente para arqs pequenos
         //Caso precise escalar o sistema para milhares de dados
-        try(BufferedReader br = new BufferedReader(new FileReader(caminhoArq))) {
+        try(BufferedReader br = new BufferedReader(
+    new InputStreamReader(new FileInputStream(caminhoArq), StandardCharsets.UTF_8))) {
             br.readLine(); // Lê a primeira linha e não faz nada com ela
 
             //Logica para ler todo o arquivo
@@ -41,7 +40,8 @@ public class LeitorDataBase {
     public static void lerArqDisciplina(String caminhoArq, CadastroDisciplina d){
         //OBS: O buffereader carrega todo o arquivo na memória, é útil somente para arqs pequenos
         //Caso precise escalar o sistema para milhares de dados
-        try(BufferedReader br = new BufferedReader(new FileReader(caminhoArq))) {
+        try(BufferedReader br = new BufferedReader(
+    new InputStreamReader(new FileInputStream(caminhoArq), StandardCharsets.UTF_8))) {
             br.readLine(); // Lê a primeira linha e não faz nada com ela
 
             //Logica para ler todo o arquivo
@@ -68,7 +68,8 @@ public class LeitorDataBase {
     public static void lerArqMatricula(String caminhoArq, Matricula m){
         //OBS: O buffereader carrega todo o arquivo na memória, é útil somente para arqs pequenos
         //Caso precise escalar o sistema para milhares de alunos
-        try(BufferedReader br = new BufferedReader(new FileReader(caminhoArq))) {
+        try(BufferedReader br = new BufferedReader(
+    new InputStreamReader(new FileInputStream(caminhoArq), StandardCharsets.UTF_8))) {
             br.readLine(); // Lê a primeira linha e não faz nada com ela
 
             //Logica para ler todo o arquivo
