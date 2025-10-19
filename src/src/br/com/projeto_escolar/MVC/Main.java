@@ -17,6 +17,5 @@ public class Main {
         cadastroDisciplina.adicionarDisciplina(matematica);
         cadastroDisciplina.removerDisciplina("MAT101");
         System.out.println( cadastroDisciplina.verificarDisciplina("MAT101"));
-
     }
 }
