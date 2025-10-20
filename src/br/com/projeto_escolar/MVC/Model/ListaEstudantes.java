@@ -50,7 +50,7 @@ public class ListaEstudantes {
         String termoDeBusca = subString.toLowerCase(); // transforma em minusculas
 
         for(Estudante e : listaEstudante){
-            if (e.getNome().toLowerCase().contains(termoDeBusca)){
+            if (e.getNome().toLowerCase().contains(termoDeBusca)){ //
                 encontrados.add(e);
             }
         }
@@ -61,7 +61,6 @@ public class ListaEstudantes {
     *  que vai ser ordenada*/
     public void ordenarEstudantesPorNome(){
         listaEstudante.sort(Comparator.comparing(Estudante::getNome));
-
         for (Estudante e : listaEstudante){
             System.out.println(e.getNome());
         }

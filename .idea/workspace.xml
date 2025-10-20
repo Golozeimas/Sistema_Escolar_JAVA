@@ -4,6 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+    <list default="true" id="309afd04-f3ec-4f34-8d91-4afbe9947de4" name="Changes" comment="" />
     <list default="true" id="c04103a6-bba6-492e-85bb-1ab964995c42" name="Changes" comment="&lt;feat&gt; Adiciona método que remove a disciplina">
       <change beforePath="$PROJECT_DIR$/.idea/Projeto_escolar.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Projeto_escolar.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/src/br/com/projeto_escolar/MVC/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/projeto_escolar/MVC/Main.java" afterDir="false" />
@@ -20,6 +21,10 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="f62abc6f926eff482bd26b8fd5f1d5622be1e7d2" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -50,49 +55,19 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;Golozeimas&quot;
-  }
-}</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Golozeimas/Sistema_Escolar_JAVA.git&quot;,
-    &quot;accountId&quot;: &quot;f5e23fb8-05ae-421d-8d47-22378c449e1f&quot;
-  }
-}</component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 1
-}</component>
-  <component name="ProjectId" id="34CV4iOFKDQ9YU96noQtXvqYOvq" />
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
-  </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.Jpanel.executor": "Run",
     "Application.Main.executor": "Run",
-    "Application.NovaJframe.executor": "Run",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW": "true",
-    "git-widget-placeholder": "Matheus",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/joaos/Sistema_Escolar_JAVA",
-    "project.structure.last.edited": "Project",
+    "onboarding.tips.debug.path": "C:/Users/joaos/Sistema_Escolar_JAVA/untitled/src/Main.java",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+    "project.structure.side.proportion": "0.2"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\joaos\Sistema_Escolar_JAVA" />
+      <recent name="C:\Users\joaos\Sistema_Escolar_JAVA/s" />
       <recent name="C:\Users\joaos\Sistema_Escolar_JAVA\src" />
       <recent name="C:\Users\joaos\Sistema_Escolar_JAVA" />
       <recent name="C:\Users\joaos\Sistema_Escolar_JAVA\codigo" />
@@ -122,6 +97,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="Sistema_Escolar_JAVA" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="Sistema_Escolar_JAVA" />
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
@@ -129,131 +115,6 @@
     </recent_temporary>
   </component>
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="c04103a6-bba6-492e-85bb-1ab964995c42" name="Changes" comment="" />
-      <created>1760717351650</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1760717351650</updated>
-    </task>
-    <task id="LOCAL-00001" summary="&lt;feat&gt; Adiciona função de ordenar por nomes os estudantes">
-      <option name="closed" value="true" />
-      <created>1760721002920</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1760721002920</updated>
-    </task>
-    <task id="LOCAL-00002" summary="&lt;feat&gt; Adiciona função de ordenar por nomes os estudantes">
-      <option name="closed" value="true" />
-      <created>1760721116728</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1760721116728</updated>
-    </task>
-    <task id="LOCAL-00003" summary="&lt;feat&gt; Adiciona função de buscar por nome, retornando uma lista de nome, e refaz a função de remover estudante com Iterator">
-      <option name="closed" value="true" />
-      <created>1760747136336</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1760747136336</updated>
-    </task>
-    <task id="LOCAL-00004" summary="&lt;feat&gt; Adiciona função de buscar por nome, retornando uma lista de nome, e refaz a função de remover estudante com Iterator">
-      <option name="closed" value="true" />
-      <created>1760747159935</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1760747159935</updated>
-    </task>
-    <task id="LOCAL-00005" summary="&lt;feat&gt; Adiciona função adicionarDisciplina e função que verifica a se a disciplina existe">
-      <option name="closed" value="true" />
-      <created>1760813839087</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1760813839087</updated>
-    </task>
-    <task id="LOCAL-00006" summary="&lt;feat&gt; Adiciona método adicionarDisciplina e método que verifica a se a disciplina existe">
-      <option name="closed" value="true" />
-      <created>1760813863533</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1760813863533</updated>
-    </task>
-    <task id="LOCAL-00007" summary="&lt;feat&gt; Adiciona método que remove a disciplina">
-      <option name="closed" value="true" />
-      <created>1760842549728</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1760842549728</updated>
-    </task>
-    <option name="localTasksCounter" value="8" />
     <servers />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="RECENT_FILTERS">
-      <map>
-        <entry key="Branch">
-          <value>
-            <list>
-              <RecentGroup>
-                <option name="FILTER_VALUES">
-                  <option value="Matheus" />
-                </option>
-              </RecentGroup>
-              <RecentGroup>
-                <option name="FILTER_VALUES">
-                  <option value="origin/main" />
-                </option>
-              </RecentGroup>
-              <RecentGroup>
-                <option name="FILTER_VALUES">
-                  <option value="HEAD" />
-                </option>
-              </RecentGroup>
-              <RecentGroup>
-                <option name="FILTER_VALUES">
-                  <option value="main" />
-                </option>
-              </RecentGroup>
-            </list>
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="Matheus" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="&lt;feat&gt; Adiciona função de ordenar por nomes os estudantes" />
-    <MESSAGE value="&lt;feat&gt; Adiciona função de buscar por nome, retornando uma lista de nome, e refaz a função de remover estudante com Iterator" />
-    <MESSAGE value="&lt;feat&gt; Adiciona função adicionarDisciplina e função que verifica a se a disciplina existe" />
-    <MESSAGE value="&lt;feat&gt; Adiciona método adicionarDisciplina e método que verifica a se a disciplina existe" />
-    <MESSAGE value="&lt;feat&gt; Adiciona método que remove a disciplina" />
-    <option name="LAST_COMMIT_MESSAGE" value="&lt;feat&gt; Adiciona método que remove a disciplina" />
   </component>
 </project>
