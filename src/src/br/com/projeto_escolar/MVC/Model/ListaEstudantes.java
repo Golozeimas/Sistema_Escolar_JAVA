@@ -65,6 +65,13 @@ public class ListaEstudantes {
         for (Estudante e : listaEstudante){
             System.out.println(e.getNome());
         }
+    }
 
+
+    // ===== PARA TESTES ========
+    // APAGAR DEPOIS
+
+    public List<Estudante> obterTodos() {
+      return new ArrayList<>(listaEstudante);
     }
 }

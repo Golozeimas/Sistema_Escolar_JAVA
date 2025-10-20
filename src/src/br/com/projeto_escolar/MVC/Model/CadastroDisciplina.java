@@ -7,8 +7,13 @@ import java.util.Set;
 public class CadastroDisciplina {
     private Set<Disciplina> disciplinas = new HashSet<>();
 
-    public void adicionarDisciplina(Disciplina d){
-        disciplinas.add(d);
+    /*
+     * @return false se não for adicionado
+     * @return true se for adicionado com sucesso(caso nao houver duplicadas)
+     */
+    public boolean adicionarDisciplina(Disciplina d){
+        boolean adicionado = disciplinas.add(d);
+        return adicionado;
     }
 
     public boolean verificarDisciplina(String codigo){
@@ -31,6 +36,11 @@ public class CadastroDisciplina {
                 System.out.println("removendo...");
             }
         }
+    }
+
+    //Esse metodo retorna uma copia para evitar alterar os dados principais
+    public Set<Disciplina> obterTodasDisciplinas(){
+        return new HashSet<>(disciplinas);
     }
 
 }

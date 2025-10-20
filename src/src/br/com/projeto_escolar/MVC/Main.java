@@ -9,7 +9,7 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        Disciplina matematica = new Disciplina();
+        Disciplina matematica = new Disciplina("MAT002", "matematica");
         CadastroDisciplina cadastroDisciplina = new CadastroDisciplina();
 
         matematica.setCodigo("MAT101");
@@ -17,6 +17,5 @@ public class Main {
         cadastroDisciplina.adicionarDisciplina(matematica);
         cadastroDisciplina.removerDisciplina("MAT101");
         System.out.println( cadastroDisciplina.verificarDisciplina("MAT101"));
-
     }
 }
