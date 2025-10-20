@@ -1,0 +1,39 @@
+Index: src/src/br/com/projeto_escolar/MVC/Model/LeitorDataBase.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/src/br/com/projeto_escolar/MVC/Model/LeitorDataBase.java b/src/br/com/projeto_escolar/MVC/Model/LeitorDataBase.java
+rename from src/src/br/com/projeto_escolar/MVC/Model/LeitorDataBase.java
+rename to src/br/com/projeto_escolar/MVC/Model/LeitorDataBase.java
+--- a/src/src/br/com/projeto_escolar/MVC/Model/LeitorDataBase.java	(revision bf271178d0fc067f95cf761a055920e9229ad8d7)
++++ b/src/br/com/projeto_escolar/MVC/Model/LeitorDataBase.java	(date 1760974636219)
+@@ -1,10 +1,6 @@
+ package br.com.projeto_escolar.MVC.Model;
+ import java.io.BufferedReader;
+ import java.io.FileReader;
+-import java.io.IOException;
+-
+-import br.com.projeto_escolar.MVC.Model.Estudante;
+-import br.com.projeto_escolar.MVC.Model.*;
+ 
+ public class LeitorDataBase {
+     
+diff --git a/src/src/br/com/projeto_escolar/MVC/Model/CadastroDisciplina.java b/src/br/com/projeto_escolar/MVC/Model/CadastroDisciplina.java
+rename from src/src/br/com/projeto_escolar/MVC/Model/CadastroDisciplina.java
+rename to src/br/com/projeto_escolar/MVC/Model/CadastroDisciplina.java
+diff --git a/src/src/br/com/projeto_escolar/MVC/Model/Estudante.java b/src/br/com/projeto_escolar/MVC/Model/Estudante.java
+rename from src/src/br/com/projeto_escolar/MVC/Model/Estudante.java
+rename to src/br/com/projeto_escolar/MVC/Model/Estudante.java
+diff --git a/src/src/br/com/projeto_escolar/MVC/Model/ListaEstudantes.java b/src/br/com/projeto_escolar/MVC/Model/ListaEstudantes.java
+rename from src/src/br/com/projeto_escolar/MVC/Model/ListaEstudantes.java
+rename to src/br/com/projeto_escolar/MVC/Model/ListaEstudantes.java
+diff --git a/src/src/br/com/projeto_escolar/MVC/Model/Disciplina.java b/src/br/com/projeto_escolar/MVC/Model/Disciplina.java
+rename from src/src/br/com/projeto_escolar/MVC/Model/Disciplina.java
+rename to src/br/com/projeto_escolar/MVC/Model/Disciplina.java
+diff --git a/src/src/br/com/projeto_escolar/MVC/View/NovaJframe.java b/src/br/com/projeto_escolar/MVC/View/NovaJframe.java
+rename from src/src/br/com/projeto_escolar/MVC/View/NovaJframe.java
+rename to src/br/com/projeto_escolar/MVC/View/NovaJframe.java
+diff --git a/src/src/br/com/projeto_escolar/MVC/Model/Matricula.java b/src/br/com/projeto_escolar/MVC/Model/Matricula.java
+rename from src/src/br/com/projeto_escolar/MVC/Model/Matricula.java
+rename to src/br/com/projeto_escolar/MVC/Model/Matricula.java

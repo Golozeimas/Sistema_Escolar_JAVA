@@ -5,6 +5,11 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 
+import java.io.FileReader;
+import java.io.IOException;
+
+import br.com.projeto_escolar.MVC.Model.Estudante;
+import br.com.projeto_escolar.MVC.Model.*;
 
 public class LeitorDataBase {
     
@@ -14,6 +19,8 @@ public class LeitorDataBase {
         //Caso precise escalar o sistema para milhares de dados
         try(BufferedReader br = new BufferedReader(
     new InputStreamReader(new FileInputStream(caminhoArq), StandardCharsets.UTF_8))) {
+        //Caso precise escalar o sistema para milhares de alunos
+        try(BufferedReader br = new BufferedReader(new FileReader(caminhoArq))) {
             br.readLine(); // Lê a primeira linha e não faz nada com ela
 
             //Logica para ler todo o arquivo
@@ -33,6 +40,7 @@ public class LeitorDataBase {
 
             }
         } catch (Exception er) {
+            // TODO: handle exception
             System.out.println("Erro ao ler arquivo estudante.csv, tente colocar no diretório ./data");
         }
     }
@@ -42,6 +50,10 @@ public class LeitorDataBase {
         //Caso precise escalar o sistema para milhares de dados
         try(BufferedReader br = new BufferedReader(
     new InputStreamReader(new FileInputStream(caminhoArq), StandardCharsets.UTF_8))) {
+    public static void lerArqDisciplina(String caminhoArq, Disciplina d){
+        //OBS: O buffereader carrega todo o arquivo na memória, é útil somente para arqs pequenos
+        //Caso precise escalar o sistema para milhares de alunos
+        try(BufferedReader br = new BufferedReader(new FileReader(caminhoArq))) {
             br.readLine(); // Lê a primeira linha e não faz nada com ela
 
             //Logica para ler todo o arquivo
@@ -61,6 +73,10 @@ public class LeitorDataBase {
 
             }
         } catch (Exception er) {
+                if (linha.isEmpty()) continue;
+            }
+        } catch (Exception er) {
+            // TODO: handle exception
              System.out.println("Erro ao ler arquivo disciplinas.csv, tente colocar no diretório ./data");
         }
     }
@@ -70,6 +86,7 @@ public class LeitorDataBase {
         //Caso precise escalar o sistema para milhares de alunos
         try(BufferedReader br = new BufferedReader(
     new InputStreamReader(new FileInputStream(caminhoArq), StandardCharsets.UTF_8))) {
+        try(BufferedReader br = new BufferedReader(new FileReader(caminhoArq))) {
             br.readLine(); // Lê a primeira linha e não faz nada com ela
 
             //Logica para ler todo o arquivo
@@ -79,6 +96,7 @@ public class LeitorDataBase {
                 if (linha.isEmpty()) continue;
             }
         } catch (Exception er) {
+            // TODO: handle exception
              System.out.println("Erro ao ler arquivo matricula.csv, tente colocar no diretório ./data");
         }
     }

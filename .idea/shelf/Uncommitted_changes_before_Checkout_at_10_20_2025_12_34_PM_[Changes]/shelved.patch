@@ -1,0 +1,37 @@
+Index: src/src/br/com/projeto_escolar/MVC/Main.java
+===================================================================
+diff --git a/src/src/br/com/projeto_escolar/MVC/Main.java b/src/br/com/projeto_escolar/MVC/Main.java
+rename from src/src/br/com/projeto_escolar/MVC/Main.java
+rename to src/br/com/projeto_escolar/MVC/Main.java
+--- a/src/src/br/com/projeto_escolar/MVC/Main.java	(revision 7dd52f717cc543267d8eb57f646dc9e5e8e305f5)
++++ b/src/br/com/projeto_escolar/MVC/Main.java	(date 1760974271382)
+@@ -2,21 +2,22 @@
+ 
+ import br.com.projeto_escolar.MVC.Model.CadastroDisciplina;
+ import br.com.projeto_escolar.MVC.Model.Disciplina;
+-import br.com.projeto_escolar.MVC.Model.Estudante;
+-import br.com.projeto_escolar.MVC.Model.ListaEstudantes;
+-
+-import java.util.List;
+ 
+ public class Main {
+     public static void main(String[] args) {
+         Disciplina matematica = new Disciplina();
++        Disciplina portugues = new Disciplina();
+         CadastroDisciplina cadastroDisciplina = new CadastroDisciplina();
+ 
+-        matematica.setCodigo("MAT101");
++        portugues.setNomeDisciplina("portugues");
++        portugues.setCodigo("POT100");
+         matematica.setNomeDisciplina("matematica");
++        matematica.setCodigo("MAT101");
+         cadastroDisciplina.adicionarDisciplina(matematica);
+-        cadastroDisciplina.removerDisciplina("MAT101");
+-        System.out.println( cadastroDisciplina.verificarDisciplina("MAT101"));
++        cadastroDisciplina.adicionarDisciplina(portugues);
++        cadastroDisciplina.verificarDisciplina("MAT101");
++
++        System.out.println(cadastroDisciplina.obterTodasDisciplinas());
+ 
+     }
+ }

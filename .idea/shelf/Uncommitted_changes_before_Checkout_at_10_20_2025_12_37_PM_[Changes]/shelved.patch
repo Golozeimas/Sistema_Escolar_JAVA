@@ -1,0 +1,58 @@
+Index: src/src/br/com/projeto_escolar/MVC/Model/LeitorDataBase.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/src/br/com/projeto_escolar/MVC/Model/LeitorDataBase.java b/src/br/com/projeto_escolar/MVC/Model/LeitorDataBase.java
+rename from src/src/br/com/projeto_escolar/MVC/Model/LeitorDataBase.java
+rename to src/br/com/projeto_escolar/MVC/Model/LeitorDataBase.java
+--- a/src/src/br/com/projeto_escolar/MVC/Model/LeitorDataBase.java	(revision 7dd52f717cc543267d8eb57f646dc9e5e8e305f5)
++++ b/src/br/com/projeto_escolar/MVC/Model/LeitorDataBase.java	(date 1760974537959)
+@@ -1,10 +1,6 @@
+ package br.com.projeto_escolar.MVC.Model;
+ import java.io.BufferedReader;
+ import java.io.FileReader;
+-import java.io.IOException;
+-
+-import br.com.projeto_escolar.MVC.Model.Estudante;
+-import br.com.projeto_escolar.MVC.Model.*;
+ 
+ public class LeitorDataBase {
+     
+Index: .idea/Projeto_escolar.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<module type=\"JAVA_MODULE\" version=\"4\">\r\n  <component name=\"CheckStyle-IDEA-Module\" serialisationVersion=\"2\">\r\n    <option name=\"activeLocationsIds\" />\r\n  </component>\r\n  <component name=\"NewModuleRootManager\" inherit-compiler-output=\"true\">\r\n    <exclude-output />\r\n    <content url=\"file://$MODULE_DIR$\">\r\n      <sourceFolder url=\"file://$MODULE_DIR$/src/src\" isTestSource=\"false\" />\r\n    </content>\r\n    <orderEntry type=\"inheritedJdk\" />\r\n    <orderEntry type=\"sourceFolder\" forTests=\"false\" />\r\n  </component>\r\n</module>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/Projeto_escolar.iml b/.idea/Projeto_escolar.iml
+--- a/.idea/Projeto_escolar.iml	(revision 7dd52f717cc543267d8eb57f646dc9e5e8e305f5)
++++ b/.idea/Projeto_escolar.iml	(date 1760974537936)
+@@ -6,7 +6,7 @@
+   <component name="NewModuleRootManager" inherit-compiler-output="true">
+     <exclude-output />
+     <content url="file://$MODULE_DIR$">
+-      <sourceFolder url="file://$MODULE_DIR$/src/src" isTestSource="false" />
++      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+     </content>
+     <orderEntry type="inheritedJdk" />
+     <orderEntry type="sourceFolder" forTests="false" />
+diff --git a/src/src/br/com/projeto_escolar/MVC/Model/Estudante.java b/src/br/com/projeto_escolar/MVC/Model/Estudante.java
+rename from src/src/br/com/projeto_escolar/MVC/Model/Estudante.java
+rename to src/br/com/projeto_escolar/MVC/Model/Estudante.java
+diff --git a/src/src/br/com/projeto_escolar/MVC/Model/ListaEstudantes.java b/src/br/com/projeto_escolar/MVC/Model/ListaEstudantes.java
+rename from src/src/br/com/projeto_escolar/MVC/Model/ListaEstudantes.java
+rename to src/br/com/projeto_escolar/MVC/Model/ListaEstudantes.java
+diff --git a/src/src/br/com/projeto_escolar/MVC/Model/Matricula.java b/src/br/com/projeto_escolar/MVC/Model/Matricula.java
+rename from src/src/br/com/projeto_escolar/MVC/Model/Matricula.java
+rename to src/br/com/projeto_escolar/MVC/Model/Matricula.java
+diff --git a/src/src/br/com/projeto_escolar/MVC/Model/Disciplina.java b/src/br/com/projeto_escolar/MVC/Model/Disciplina.java
+rename from src/src/br/com/projeto_escolar/MVC/Model/Disciplina.java
+rename to src/br/com/projeto_escolar/MVC/Model/Disciplina.java
+diff --git a/src/src/br/com/projeto_escolar/MVC/View/NovaJframe.java b/src/br/com/projeto_escolar/MVC/View/NovaJframe.java
+rename from src/src/br/com/projeto_escolar/MVC/View/NovaJframe.java
+rename to src/br/com/projeto_escolar/MVC/View/NovaJframe.java
+diff --git a/src/src/br/com/projeto_escolar/MVC/Model/CadastroDisciplina.java b/src/br/com/projeto_escolar/MVC/Model/CadastroDisciplina.java
+rename from src/src/br/com/projeto_escolar/MVC/Model/CadastroDisciplina.java
+rename to src/br/com/projeto_escolar/MVC/Model/CadastroDisciplina.java
