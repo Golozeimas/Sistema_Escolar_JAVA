@@ -50,7 +50,7 @@ public class ListaEstudantes {
         String termoDeBusca = subString.toLowerCase(); // transforma em minusculas
 
         for(Estudante e : listaEstudante){
-            if (e.getNome().toLowerCase().contains(termoDeBusca)){ //
+            if (e.getNome().toLowerCase().contains(termoDeBusca)){
                 encontrados.add(e);
             }
         }

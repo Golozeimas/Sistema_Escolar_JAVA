@@ -1,0 +1,58 @@
+Index: src/src/br/com/projeto_escolar/MVC/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package br.com.projeto_escolar.MVC;\r\n\r\nimport br.com.projeto_escolar.MVC.Model.CadastroDisciplina;\r\nimport br.com.projeto_escolar.MVC.Model.Disciplina;\r\nimport br.com.projeto_escolar.MVC.Model.Estudante;\r\nimport br.com.projeto_escolar.MVC.Model.ListaEstudantes;\r\n\r\nimport java.util.List;\r\n\r\npublic class Main {\r\n    public static void main(String[] args) {\r\n        ListaEstudantes listaEstudantes = new ListaEstudantes();\r\n        Estudante estudante = new Estudante();\r\n        Estudante estudante1 = new Estudante();\r\n        Estudante estudante2 = new Estudante();\r\n\r\n        Disciplina matematica = new Disciplina();\r\n        CadastroDisciplina cadastroDisciplina = new CadastroDisciplina();\r\n\r\n        matematica.setCodigo(\"MAT101\");\r\n        matematica.setNomeDisciplina(\"Matemética\");\r\n\r\n        cadastroDisciplina.adicionarDisciplina(matematica);\r\n\r\n        cadastroDisciplina.verificarDisciplina(\"MAT101\");\r\n\r\n\r\n        estudante.setNome(\"Matheus\");\r\n        estudante.setId(1);\r\n\r\n        estudante1.setNome(\"Gabriel\");\r\n        estudante1.setId(2);\r\n\r\n        estudante2.setNome(\"Gael\");\r\n        estudante2.setId(3);\r\n\r\n        listaEstudantes.adicionarEstudante(estudante);\r\n        listaEstudantes.adicionarEstudante(estudante1);\r\n        listaEstudantes.adicionarEstudante(estudante2);\r\n        List<Estudante> resultados = listaEstudantes.buscarEstudantePorNome(\"ga\");\r\n        listaEstudantes.obterEstudantePorIndice(2);\r\n        listaEstudantes.obterEstudantePorIndice(1);\r\n        System.out.println(\"============================================\");\r\n        listaEstudantes.ordenarEstudantesPorNome();\r\n        System.out.println(\"===========================================\");\r\n        for( Estudante e : resultados){\r\n            System.out.println(e);\r\n        }\r\n        System.out.println(\"============================================\");\r\n        listaEstudantes.removerEstudantePorId(2);\r\n        listaEstudantes.removerEstudantePorId(1);\r\n\r\n\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/src/br/com/projeto_escolar/MVC/Main.java b/src/src/br/com/projeto_escolar/MVC/Main.java
+--- a/src/src/br/com/projeto_escolar/MVC/Main.java	(revision bf271178d0fc067f95cf761a055920e9229ad8d7)
++++ b/src/src/br/com/projeto_escolar/MVC/Main.java	(date 1760842665199)
+@@ -9,47 +9,6 @@
+ 
+ public class Main {
+     public static void main(String[] args) {
+-        ListaEstudantes listaEstudantes = new ListaEstudantes();
+-        Estudante estudante = new Estudante();
+-        Estudante estudante1 = new Estudante();
+-        Estudante estudante2 = new Estudante();
+-
+-        Disciplina matematica = new Disciplina();
+-        CadastroDisciplina cadastroDisciplina = new CadastroDisciplina();
+-
+-        matematica.setCodigo("MAT101");
+-        matematica.setNomeDisciplina("Matemética");
+-
+-        cadastroDisciplina.adicionarDisciplina(matematica);
+-
+-        cadastroDisciplina.verificarDisciplina("MAT101");
+-
+-
+-        estudante.setNome("Matheus");
+-        estudante.setId(1);
+-
+-        estudante1.setNome("Gabriel");
+-        estudante1.setId(2);
+-
+-        estudante2.setNome("Gael");
+-        estudante2.setId(3);
+-
+-        listaEstudantes.adicionarEstudante(estudante);
+-        listaEstudantes.adicionarEstudante(estudante1);
+-        listaEstudantes.adicionarEstudante(estudante2);
+-        List<Estudante> resultados = listaEstudantes.buscarEstudantePorNome("ga");
+-        listaEstudantes.obterEstudantePorIndice(2);
+-        listaEstudantes.obterEstudantePorIndice(1);
+-        System.out.println("============================================");
+-        listaEstudantes.ordenarEstudantesPorNome();
+-        System.out.println("===========================================");
+-        for( Estudante e : resultados){
+-            System.out.println(e);
+-        }
+-        System.out.println("============================================");
+-        listaEstudantes.removerEstudantePorId(2);
+-        listaEstudantes.removerEstudantePorId(1);
+-
+ 
+     }
+ }

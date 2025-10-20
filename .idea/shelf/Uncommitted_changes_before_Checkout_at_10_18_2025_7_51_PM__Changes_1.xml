@@ -1,0 +1,19 @@
+<changelist name="Uncommitted_changes_before_Checkout_at_10_18_2025_7_51_PM_[Changes]1" date="1760827897585" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_10_18_2025_7_51_PM_[Changes]1/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Checkout at 10/18/2025 7:51 PM [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/Projeto_escolar/br/com/projeto_escolar/MVC/Main.class" />
+    <option name="AFTER_PATH" value="out/production/Projeto_escolar/br/com/projeto_escolar/MVC/Main.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_10_18_2025_7_51_PM_[Changes]1/Main.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/Projeto_escolar/br/com/projeto_escolar/MVC/Model/CadastroDisciplina.class" />
+    <option name="AFTER_PATH" value="out/production/Projeto_escolar/br/com/projeto_escolar/MVC/Model/CadastroDisciplina.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_10_18_2025_7_51_PM_[Changes]1/CadastroDisciplina.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/Projeto_escolar/br/com/projeto_escolar/MVC/Model/Disciplina.class" />
+    <option name="AFTER_PATH" value="out/production/Projeto_escolar/br/com/projeto_escolar/MVC/Model/Disciplina.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_10_18_2025_7_51_PM_[Changes]1/Disciplina.class" />
+  </binary>
+</changelist>
