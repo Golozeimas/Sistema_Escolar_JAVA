@@ -19,9 +19,9 @@ public class MainController {
         historicoNotas = new HistoricoNotas(listaEstudantes);
 
         // Carrega dados dos arquivos CSV
-        LeitorDataBase.lerArqEstudante("../data/estudantes.csv", listaEstudantes);
-        LeitorDataBase.lerArqDisciplina("../data/disciplinas.csv", cadastroDisciplina);
-        LeitorDataBase.lerArqMatricula("../data/matriculas.csv", historicoNotas);
+        LeitorDataBase.lerArqEstudante("./data/estudantes.csv", listaEstudantes);
+        LeitorDataBase.lerArqDisciplina("./data/disciplinas.csv", cadastroDisciplina);
+        LeitorDataBase.lerArqMatricula("./data/matriculas.csv", historicoNotas);
 
         // Inicializa os Controllers
         estudanteController = new EstudanteController(listaEstudantes);
@@ -46,11 +46,11 @@ public class MainController {
 
 
     public boolean gerarRelatorioCompleto() {
-        return geradorRelatorio.gerarRelatorio("output.txt");
+        return geradorRelatorio.gerarRelatorio("./joaos/output.txt");
     }
 
     public boolean gerarRelatorioResumido() {
-        return geradorRelatorio.gerarRelatorioResumido("output_resumido.txt");
+        return geradorRelatorio.gerarRelatorioResumido("./joaos/output_resumido.txt");
     }
 
     public boolean gerarRelatorioPersonalizado(String caminho) {

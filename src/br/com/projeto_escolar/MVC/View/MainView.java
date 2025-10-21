@@ -49,13 +49,13 @@ public class MainView extends JFrame {
 
         JLabel titulo = new JLabel("Sistema de Gerenciamento Escolar");
         titulo.setForeground(Color.WHITE);
-        titulo.setFont(new Font("Arial", Font.BOLD, 16));
+        titulo.setFont(new Font("Arial", Font.BOLD, 16)); // isso aqui modifica a font das letras
 
-        JButton btnRelatorio = new JButton("📊 Gerar Relatório");
+        JButton btnRelatorio = new JButton("Gerar Relatório");
         btnRelatorio.setFont(new Font("Arial", Font.BOLD, 12));
         btnRelatorio.setToolTipText("Gera o arquivo output.txt com relatório completo");
 
-        JButton btnRelatorioResumido = new JButton("📋 Relatório Resumido");
+        JButton btnRelatorioResumido = new JButton("Relatório Resumido");
         btnRelatorioResumido.setFont(new Font("Arial", Font.PLAIN, 12));
         btnRelatorioResumido.setToolTipText("Gera relatório resumido com estatísticas principais");
 
@@ -78,7 +78,6 @@ public class MainView extends JFrame {
         JDialog loadingDialog = criarDialogoLoading();
         loadingDialog.setVisible(true);
 
-        // Executa geração em thread separada para não travar a UI
         SwingWorker<Boolean, Void> worker = new SwingWorker<Boolean, Void>() {
             @Override
             protected Boolean doInBackground() throws Exception {

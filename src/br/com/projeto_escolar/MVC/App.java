@@ -8,14 +8,13 @@ import br.com.projeto_escolar.MVC.View.MainView;
 public class App {
 
     public static void main(String[] args) {
-        // Configura o Look and Feel do sistema operacional
+
         try {
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
         } catch (Exception e) {
             System.err.println("Não foi possível definir o Look and Feel do sistema.");
         }
 
-        // Executa a aplicação na thread de eventos do Swing
         SwingUtilities.invokeLater(() -> {
             try {
                 System.out.println("=".repeat(80));

@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="309afd04-f3ec-4f34-8d91-4afbe9947de4" name="Changes" comment="&lt;feat&gt; Adiciona funcionalidade de gerar relatórios">
+    <list default="true" id="309afd04-f3ec-4f34-8d91-4afbe9947de4" name="Changes" comment="&lt;update&gt; modifica o visual do sistema e adiciona botões de gerar relatórios">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/com/projeto_escolar/MVC/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/projeto_escolar/MVC/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/br/com/projeto_escolar/MVC/Controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/projeto_escolar/MVC/Controller/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/com/projeto_escolar/MVC/Model/GeradorRelatorio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/projeto_escolar/MVC/Model/GeradorRelatorio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/com/projeto_escolar/MVC/View/MainView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/projeto_escolar/MVC/View/MainView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +128,15 @@
       <option name="project" value="LOCAL" />
       <updated>1761075411663</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="&lt;update&gt; modifica o visual do sistema e adiciona botões de gerar relatórios">
+      <option name="closed" value="true" />
+      <created>1761075780001</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1761075780001</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -133,6 +145,7 @@
     <MESSAGE value="&lt;update&gt; Modifica o leitorDataBase para que consiga ler o arquivo de disciplina corretamente no formato desejado" />
     <MESSAGE value="&lt;update&gt; mudança no caminho dos arquivos &quot;.csv&quot;" />
     <MESSAGE value="&lt;feat&gt; Adiciona funcionalidade de gerar relatórios" />
-    <option name="LAST_COMMIT_MESSAGE" value="&lt;feat&gt; Adiciona funcionalidade de gerar relatórios" />
+    <MESSAGE value="&lt;update&gt; modifica o visual do sistema e adiciona botões de gerar relatórios" />
+    <option name="LAST_COMMIT_MESSAGE" value="&lt;update&gt; modifica o visual do sistema e adiciona botões de gerar relatórios" />
   </component>
 </project>

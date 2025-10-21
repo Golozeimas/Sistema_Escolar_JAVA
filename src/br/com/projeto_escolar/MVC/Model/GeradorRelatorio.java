@@ -20,7 +20,7 @@ public class GeradorRelatorio {
         this.historicoNotas = hn;
     }
 
-    /**
+    /*
      * Gera o relatório completo em arquivo output.txt
      * caminhoArquivo caminho onde o arquivo será salvo (ex: "output.txt")
      * true se gerado com sucesso, false caso contrário
@@ -215,7 +215,7 @@ public class GeradorRelatorio {
         writer.write("================================================================================\n");
     }
 
-    /**
+    /*
      * Gera um relatório resumido (apenas estatísticas principais)
      */
     public boolean gerarRelatorioResumido(String caminhoArquivo) {
