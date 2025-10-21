@@ -33,7 +33,8 @@ public class Disciplina {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Disciplina that = (Disciplina) o; //Cast perigoso, VERIFICAR VIABILIDADE
+        // Mas poderia ser if (!(o instanceof Matricula matricula))
+        Disciplina that = (Disciplina) o; //DownCast
         return Objects.equals(codigo, that.codigo);
     }
 

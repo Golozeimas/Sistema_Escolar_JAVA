@@ -24,4 +24,10 @@ public class Estudante {
         this.nome = nome;
     }
 
+    @Override
+    public String toString() {
+        // TODO Auto-generated method stub
+        return "ID - "+ id +" Nome - " + nome;
+    }
+
 }

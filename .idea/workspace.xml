@@ -4,17 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="309afd04-f3ec-4f34-8d91-4afbe9947de4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_10_20_2025_12_34_PM__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_10_20_2025_12_34_PM__Changes_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_10_20_2025_12_35_PM__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_10_20_2025_12_37_PM__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_20_2025_12_37_PM__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_20_2025_12_37_PM__Changes_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/com/projeto_escolar/MVC/Model/HistoricoNotas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/projeto_escolar/MVC/Model/HistoricoNotas.java" afterDir="false" />
+    <list default="true" id="309afd04-f3ec-4f34-8d91-4afbe9947de4" name="Changes" comment="" />
+    <list default="true" id="c04103a6-bba6-492e-85bb-1ab964995c42" name="Changes" comment="&lt;feat&gt; Adiciona método que remove a disciplina">
+      <change beforePath="$PROJECT_DIR$/.idea/Projeto_escolar.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Projeto_escolar.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src/br/com/projeto_escolar/MVC/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/projeto_escolar/MVC/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src/br/com/projeto_escolar/MVC/Model/CadastroDisciplina.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/projeto_escolar/MVC/Model/CadastroDisciplina.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src/br/com/projeto_escolar/MVC/Model/Disciplina.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/projeto_escolar/MVC/Model/Disciplina.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src/br/com/projeto_escolar/MVC/Model/Estudante.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/projeto_escolar/MVC/Model/Estudante.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src/br/com/projeto_escolar/MVC/Model/LeitorDataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/projeto_escolar/MVC/Model/LeitorDataBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src/br/com/projeto_escolar/MVC/Model/ListaEstudantes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/projeto_escolar/MVC/Model/ListaEstudantes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src/br/com/projeto_escolar/MVC/Model/Matricula.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/projeto_escolar/MVC/Model/Matricula.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/src/br/com/projeto_escolar/MVC/View/NovaJframe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/projeto_escolar/MVC/View/NovaJframe.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +32,32 @@
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="f62abc6f926eff482bd26b8fd5f1d5622be1e7d2" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="Matheus" />
+                <branch-info repo="$PROJECT_DIR$" source="rogiilima-main" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -76,6 +102,19 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\joaos\Sistema_Escolar_JAVA" />
       <recent name="C:\Users\joaos\Sistema_Escolar_JAVA/s" />
+      <recent name="C:\Users\joaos\Sistema_Escolar_JAVA\src" />
+      <recent name="C:\Users\joaos\Sistema_Escolar_JAVA" />
+      <recent name="C:\Users\joaos\Sistema_Escolar_JAVA\codigo" />
+      <recent name="C:\Users\joaos\Sistema_Escolar_JAVA\src\src\br\com\projeto_escolar" />
+    </key>
+    <key name="MoveInnerDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="br.com.projeto_escolar.MVC" />
+      <recent name="br.com.projeto_escolar.MVC.Model" />
+      <recent name="br.com.projeto_escolar.MVC.Controller" />
+      <recent name="br.com.projeto_escolar.MVC.View" />
     </key>
   </component>
   <component name="RunManager">

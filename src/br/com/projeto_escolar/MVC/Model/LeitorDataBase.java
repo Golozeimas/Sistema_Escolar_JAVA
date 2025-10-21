@@ -55,17 +55,26 @@ public class LeitorDataBase {
         }
     }
 
-    public static void lerArqMatricula(String caminhoArq, Matricula m){
+    public static void lerArqMatricula(String caminhoArq, HistoricoNotas hn){
         //OBS: O buffereader carrega todo o arquivo na memória, é útil somente para arqs pequenos
         //Caso precise escalar o sistema para milhares de alunos
         try(BufferedReader br = new BufferedReader(new FileReader(caminhoArq))) {
             br.readLine(); // Lê a primeira linha e não faz nada com ela
-
             //Logica para ler todo o arquivo
             String linha;
             while ((linha = br.readLine()) != null) {
                 linha = linha.trim(); // Remove qualquer espaço que houver
-                if (linha.isEmpty()) continue;
+                if (linha.isEmpty()) continue;// Pula qualquer linha vazia
+
+                //Separa por campos: codigo,nome
+                String[] campos = linha.split(",", -1); //-1 serve para não ignorar campos vazios
+                //if (campos.length < 1) continue; TESTAR SE VAI SER UTIL
+
+                int idEstudante = Integer.parseInt(campos[0].trim());
+                String codigoDaDisciplina = campos[1].trim();
+                Double nota = Double.parseDouble(campos[2].trim());
+
+                hn.adicionarMatricula(idEstudante, codigoDaDisciplina, nota);
             }
         } catch (Exception er) {
             // TODO: handle exception
