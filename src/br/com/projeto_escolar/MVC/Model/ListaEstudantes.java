@@ -26,18 +26,20 @@ public class ListaEstudantes {
        }
     }
 
-    public void obterEstudantePorIndice(int indice) {
+    public Optional<Estudante> obterEstudantePorIndice(int indice) {
         // uso do for-each para trabalhamos com a classe
+        if (listaEstudante.isEmpty()){
+            System.out.println("lista de estudantes está vazia");
+            return Optional.empty();
+        }
         for (Estudante estudante : listaEstudante) {
             if (estudante.getId() == indice){
-                System.out.println("Nome do estudante: " + estudante.getNome());
-                System.out.println("Id do estudante: " + estudante.getId());
-                break;
-            }
-            if (listaEstudante.isEmpty()){
-                System.out.println("lista de estudantes está vazia");
+                System.out.println(estudante);
+                return Optional.of(estudante);
             }
         }
+        System.out.println("Id do estudante não existe");
+        return Optional.empty();
     }
 
     public List<Estudante> buscarEstudantePorNome (String subString){
