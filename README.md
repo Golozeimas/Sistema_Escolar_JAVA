@@ -237,7 +237,8 @@ java -cp bin br.com.projeto_escolar.MVC.Main
 - **Problema:** Manter consistência dos dados entre diferentes abas da interface
 - **Solução:** Uso de referências compartilhadas aos mesmos objetos Model através do MainController
 
----
+### 7. **Aprender Swing**
+- **Problema:** Aprender uma biblioteca gráfica nova
 
 ## 📌 Observações
 
