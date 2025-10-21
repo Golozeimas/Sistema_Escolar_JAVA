@@ -16,9 +16,9 @@ public class MainController {
         CadastroDisciplina cadastroDisciplina = new CadastroDisciplina();
         HistoricoNotas historicoNotas = new HistoricoNotas(listaEstudantes);
 
-        LeitorDataBase.lerArqEstudante("../data/estudantes.csv", listaEstudantes);
-        LeitorDataBase.lerArqDisciplina("../data/disciplinas.csv", cadastroDisciplina);
-        LeitorDataBase.lerArqMatricula("../data/matriculas.csv", historicoNotas);
+        LeitorDataBase.lerArqEstudante("./data/estudantes.csv", listaEstudantes);
+        LeitorDataBase.lerArqDisciplina("./data/disciplinas.csv", cadastroDisciplina);
+        LeitorDataBase.lerArqMatricula("./data/matriculas.csv", historicoNotas);
 
         estudanteController = new EstudanteController(listaEstudantes);
         disciplinaController = new DisciplinaController(cadastroDisciplina);

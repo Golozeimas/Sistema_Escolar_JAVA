@@ -4,14 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="309afd04-f3ec-4f34-8d91-4afbe9947de4" name="Changes" comment="&lt;feat&gt; Adiciona partes da interface e todos os controllers do sistema, e renomeia a main para app">
-      <change afterPath="$PROJECT_DIR$/src/br/com/projeto_escolar/MVC/View/MatriculaView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="309afd04-f3ec-4f34-8d91-4afbe9947de4" name="Changes" comment="&lt;update&gt; Modifica o leitorDataBase para que consiga ler o arquivo de disciplina corretamente no formato desejado">
       <change beforePath="$PROJECT_DIR$/src/br/com/projeto_escolar/MVC/Controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/projeto_escolar/MVC/Controller/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/com/projeto_escolar/MVC/Model/LeitorDataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/projeto_escolar/MVC/Model/LeitorDataBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/com/projeto_escolar/MVC/View/MainView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/projeto_escolar/MVC/View/MainView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/br/com/projeto_escolar/MVC/View/NovaJframe.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,11 +99,21 @@
       <option name="presentableId" value="Default" />
       <updated>1760999444482</updated>
     </task>
+    <task id="LOCAL-00001" summary="&lt;update&gt; Modifica o leitorDataBase para que consiga ler o arquivo de disciplina corretamente no formato desejado">
+      <option name="closed" value="true" />
+      <created>1761063950574</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1761063950574</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="&lt;feat&gt; Adiciona partes da interface e todos os controllers do sistema" />
     <MESSAGE value="&lt;feat&gt; Adiciona partes da interface e todos os controllers do sistema, e renomeia a main para app" />
-    <option name="LAST_COMMIT_MESSAGE" value="&lt;feat&gt; Adiciona partes da interface e todos os controllers do sistema, e renomeia a main para app" />
+    <MESSAGE value="&lt;update&gt; Modifica o leitorDataBase para que consiga ler o arquivo de disciplina corretamente no formato desejado" />
+    <option name="LAST_COMMIT_MESSAGE" value="&lt;update&gt; Modifica o leitorDataBase para que consiga ler o arquivo de disciplina corretamente no formato desejado" />
   </component>
 </project>
