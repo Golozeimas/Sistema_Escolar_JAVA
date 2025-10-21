@@ -44,6 +44,6 @@ public class Disciplina {
 
     @Override
     public String toString(){
-        return "Código: " + codigo + "Materia: " + nomeDisciplina; 
+        return "Código: " + codigo + " Materia: " + nomeDisciplina; 
     }
 }
