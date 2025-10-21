@@ -1,2 +1,4 @@
 Testes*.java
 *.class
+target
+*.iml
