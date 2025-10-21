@@ -1,37 +1,44 @@
 package br.com.projeto_escolar.MVC.Controller;
+
 import br.com.projeto_escolar.MVC.Model.*;
 
-public class MainController{
-        private ListaEstudantes listaEstudantes;
-        private CadastroDisciplina cadastroDisciplina;
-        private HistoricoNotas historicoNotas;
+public class MainController {
+    private ListaEstudantes listaEstudantes;
+    private CadastroDisciplina cadastroDisciplina;
+    private HistoricoNotas historicoNotas;
 
-        private EstudanteController estudanteController;
-        private DisciplinaController disciplinaController;
-        private MatriculaController matriculaController;
+    private EstudanteController estudanteController;
+    private DisciplinaController disciplinaController;
+    private MatriculaController matriculaController;
 
-        public MainController() {
-            LeitorDataBase leitor = new LeitorDataBase();
-            listaEstudantes = leitor.carregarEstudantes();
-            cadastroDisciplina = leitor.carregarDisciplinas();
-            historicoNotas = leitor.carregarMatriculas(listaEstudantes, cadastroDisciplina);
+    public MainController() {
+        ListaEstudantes listaEstudantes = new ListaEstudantes();
+        CadastroDisciplina cadastroDisciplina = new CadastroDisciplina();
+        HistoricoNotas historicoNotas = new HistoricoNotas(listaEstudantes);
 
-            estudanteController = new EstudanteController(listaEstudantes);
-            disciplinaController = new DisciplinaController(cadastroDisciplina);
-            matriculaController = new MatriculaController(historicoNotas, listaEstudantes, cadastroDisciplina);
-        }
+        LeitorDataBase.lerArqEstudante("../data/estudantes.csv", listaEstudantes);
+        LeitorDataBase.lerArqDisciplina("../data/disciplinas.csv", cadastroDisciplina);
+        LeitorDataBase.lerArqMatricula("../data/matriculas.csv", historicoNotas);
 
-        public EstudanteController getEstudanteController() {
-            return estudanteController;
-        }
+        estudanteController = new EstudanteController(listaEstudantes);
+        disciplinaController = new DisciplinaController(cadastroDisciplina);
+        matriculaController = new MatriculaController(historicoNotas, listaEstudantes, cadastroDisciplina);
 
-        public DisciplinaController getDisciplinaController() {
-            return disciplinaController;
-        }
-
-        public MatriculaController getMatriculaController() {
-            return matriculaController;
-        }
+        this.listaEstudantes = listaEstudantes;
+        this.cadastroDisciplina = cadastroDisciplina;
+        this.historicoNotas = historicoNotas;
     }
 
+
+    public EstudanteController getEstudanteController() {
+        return estudanteController;
+    }
+
+    public DisciplinaController getDisciplinaController() {
+        return disciplinaController;
+    }
+
+    public MatriculaController getMatriculaController() {
+        return matriculaController;
+    }
 }

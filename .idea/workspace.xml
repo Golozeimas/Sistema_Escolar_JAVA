@@ -4,17 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="309afd04-f3ec-4f34-8d91-4afbe9947de4" name="Changes" comment="" />
-    <list default="true" id="c04103a6-bba6-492e-85bb-1ab964995c42" name="Changes" comment="&lt;feat&gt; Adiciona método que remove a disciplina">
-      <change beforePath="$PROJECT_DIR$/.idea/Projeto_escolar.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Projeto_escolar.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/br/com/projeto_escolar/MVC/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/projeto_escolar/MVC/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/br/com/projeto_escolar/MVC/Model/CadastroDisciplina.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/projeto_escolar/MVC/Model/CadastroDisciplina.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/br/com/projeto_escolar/MVC/Model/Disciplina.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/projeto_escolar/MVC/Model/Disciplina.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/br/com/projeto_escolar/MVC/Model/Estudante.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/projeto_escolar/MVC/Model/Estudante.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/br/com/projeto_escolar/MVC/Model/LeitorDataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/projeto_escolar/MVC/Model/LeitorDataBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/br/com/projeto_escolar/MVC/Model/ListaEstudantes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/projeto_escolar/MVC/Model/ListaEstudantes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/br/com/projeto_escolar/MVC/Model/Matricula.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/projeto_escolar/MVC/Model/Matricula.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/src/br/com/projeto_escolar/MVC/View/NovaJframe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/projeto_escolar/MVC/View/NovaJframe.java" afterDir="false" />
+    <list default="true" id="309afd04-f3ec-4f34-8d91-4afbe9947de4" name="Changes" comment="&lt;feat&gt; Adiciona partes da interface e todos os controllers do sistema, e renomeia a main para app">
+      <change afterPath="$PROJECT_DIR$/src/br/com/projeto_escolar/MVC/View/MatriculaView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/com/projeto_escolar/MVC/Controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/projeto_escolar/MVC/Controller/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/com/projeto_escolar/MVC/Model/LeitorDataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/projeto_escolar/MVC/Model/LeitorDataBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/com/projeto_escolar/MVC/View/MainView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/br/com/projeto_escolar/MVC/View/MainView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/br/com/projeto_escolar/MVC/View/NovaJframe.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,52 +28,26 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="f62abc6f926eff482bd26b8fd5f1d5622be1e7d2" />
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="HTML File" />
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
-  <component name="Git.Settings">
-    <favorite-branches>
-      <branch-storage>
-        <map>
-          <entry type="LOCAL">
-            <value>
-              <list>
-                <branch-info repo="$PROJECT_DIR$" source="Matheus" />
-                <branch-info repo="$PROJECT_DIR$" source="rogiilima-main" />
-              </list>
-            </value>
-          </entry>
-        </map>
-      </branch-storage>
-    </favorite-branches>
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="Matheus" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Golozeimas"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Golozeimas&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Golozeimas/Sistema_Escolar_JAVA.git",
-    "accountId": "f5e23fb8-05ae-421d-8d47-22378c449e1f"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Golozeimas/Sistema_Escolar_JAVA.git&quot;,
+    &quot;accountId&quot;: &quot;f5e23fb8-05ae-421d-8d47-22378c449e1f&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="34LiqeahObbE8OISyRYFJuKhrQE" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -84,15 +55,16 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.App.executor": "Run",
     "Application.Main.executor": "Run",
     "Application.NovaJframe.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "Matheus",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "onboarding.tips.debug.path": "C:/Users/joaos/Sistema_Escolar_JAVA/untitled/src/Main.java",
+    "onboarding.tips.debug.path": "C:/Users/joaos/Sistema_Escolar_JAVA/src/Main.java",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2"
@@ -102,27 +74,12 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\joaos\Sistema_Escolar_JAVA" />
       <recent name="C:\Users\joaos\Sistema_Escolar_JAVA/s" />
-      <recent name="C:\Users\joaos\Sistema_Escolar_JAVA\src" />
-      <recent name="C:\Users\joaos\Sistema_Escolar_JAVA" />
-      <recent name="C:\Users\joaos\Sistema_Escolar_JAVA\codigo" />
-      <recent name="C:\Users\joaos\Sistema_Escolar_JAVA\src\src\br\com\projeto_escolar" />
-    </key>
-    <key name="MoveInnerDialog.RECENTS_KEY">
-      <recent name="" />
-    </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="br.com.projeto_escolar.MVC" />
-      <recent name="br.com.projeto_escolar.MVC.Model" />
-      <recent name="br.com.projeto_escolar.MVC.Controller" />
-      <recent name="br.com.projeto_escolar.MVC.View" />
     </key>
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="21" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="br.com.projeto_escolar.MVC.Main" />
-      <module name="Sistema_Escolar_JAVA" />
+      <module name="Projeto_escolar" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="br.com.projeto_escolar.MVC.*" />
@@ -136,6 +93,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -148,5 +106,10 @@
       <updated>1760999444482</updated>
     </task>
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="&lt;feat&gt; Adiciona partes da interface e todos os controllers do sistema" />
+    <MESSAGE value="&lt;feat&gt; Adiciona partes da interface e todos os controllers do sistema, e renomeia a main para app" />
+    <option name="LAST_COMMIT_MESSAGE" value="&lt;feat&gt; Adiciona partes da interface e todos os controllers do sistema, e renomeia a main para app" />
   </component>
 </project>

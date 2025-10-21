@@ -29,5 +29,3 @@ public class MainView extends JFrame {
             add(tabbedPane, BorderLayout.CENTER);
         }
     }
-
-}

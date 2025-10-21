@@ -7,7 +7,7 @@ import br.com.projeto_escolar.MVC.Model.Estudante;
 import br.com.projeto_escolar.MVC.Model.*;
 
 public class LeitorDataBase {
-    
+
     // Recebe o caminho do arquivo e o objeto onde deve adicionar
     public static void lerArqEstudante(String caminhoArq, ListaEstudantes le){
         //OBS: O buffereader carrega todo o arquivo na memória, é útil somente para arqs pequenos
@@ -32,26 +32,37 @@ public class LeitorDataBase {
 
             }
         } catch (Exception er) {
-            // TODO: handle exception
             System.out.println("Erro ao ler arquivo estudante.csv, tente colocar no diretório ./data");
         }
     }
 
-    public static void lerArqDisciplina(String caminhoArq, Disciplina d){
+    public static void lerArqDisciplina(String caminhoArq, CadastroDisciplina cd){
         //OBS: O buffereader carrega todo o arquivo na memória, é útil somente para arqs pequenos
         //Caso precise escalar o sistema para milhares de alunos
         try(BufferedReader br = new BufferedReader(new FileReader(caminhoArq))) {
-            br.readLine(); // Lê a primeira linha e não faz nada com ela
+            br.readLine(); // Lê a primeira linha (cabeçalho) e não faz nada com ela
 
             //Logica para ler todo o arquivo
             String linha;
             while ((linha = br.readLine()) != null) {
                 linha = linha.trim(); // Remove qualquer espaço que houver
-                if (linha.isEmpty()) continue;
+                if (linha.isEmpty()) continue; // Pula qualquer linha vazia
+
+                //Separa por campos: codigo,nomeDisciplina
+                String[] campos = linha.split(",", -1); //-1 serve para não ignorar campos vazios
+
+                if (campos.length < 2) continue; // Garante que tem pelo menos 2 campos
+
+                String codigo = campos[0].trim();
+                String nomeDisciplina = campos[1].trim();
+
+                // Cria a disciplina e adiciona no cadastro
+                Disciplina disciplina = new Disciplina(codigo, nomeDisciplina);
+                cd.adicionarDisciplina(disciplina);
             }
         } catch (Exception er) {
-            // TODO: handle exception
-             System.out.println("Erro ao ler arquivo disciplinas.csv, tente colocar no diretório ./data");
+            System.out.println("Erro ao ler arquivo disciplinas.csv, tente colocar no diretório ./data");
+            er.printStackTrace(); // Ajuda a debugar
         }
     }
 
@@ -66,9 +77,10 @@ public class LeitorDataBase {
                 linha = linha.trim(); // Remove qualquer espaço que houver
                 if (linha.isEmpty()) continue;// Pula qualquer linha vazia
 
-                //Separa por campos: codigo,nome
+                //Separa por campos: idEstudante,codigoDisciplina,nota
                 String[] campos = linha.split(",", -1); //-1 serve para não ignorar campos vazios
-                //if (campos.length < 1) continue; TESTAR SE VAI SER UTIL
+
+                if (campos.length < 3) continue; // Garante que tem pelo menos 3 campos
 
                 int idEstudante = Integer.parseInt(campos[0].trim());
                 String codigoDaDisciplina = campos[1].trim();
@@ -77,8 +89,8 @@ public class LeitorDataBase {
                 hn.adicionarMatricula(idEstudante, codigoDaDisciplina, nota);
             }
         } catch (Exception er) {
-            // TODO: handle exception
-             System.out.println("Erro ao ler arquivo matricula.csv, tente colocar no diretório ./data");
+            System.out.println("Erro ao ler arquivo matricula.csv, tente colocar no diretório ./data");
+            er.printStackTrace(); // Ajuda a debugar
         }
     }
 }
