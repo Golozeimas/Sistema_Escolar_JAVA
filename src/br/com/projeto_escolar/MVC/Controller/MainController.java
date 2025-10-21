@@ -6,29 +6,31 @@ public class MainController {
     private ListaEstudantes listaEstudantes;
     private CadastroDisciplina cadastroDisciplina;
     private HistoricoNotas historicoNotas;
+    private GeradorRelatorio geradorRelatorio;
 
     private EstudanteController estudanteController;
     private DisciplinaController disciplinaController;
     private MatriculaController matriculaController;
 
     public MainController() {
-        ListaEstudantes listaEstudantes = new ListaEstudantes();
-        CadastroDisciplina cadastroDisciplina = new CadastroDisciplina();
-        HistoricoNotas historicoNotas = new HistoricoNotas(listaEstudantes);
+        // Inicializa os Models
+        listaEstudantes = new ListaEstudantes();
+        cadastroDisciplina = new CadastroDisciplina();
+        historicoNotas = new HistoricoNotas(listaEstudantes);
 
-        LeitorDataBase.lerArqEstudante("./data/estudantes.csv", listaEstudantes);
-        LeitorDataBase.lerArqDisciplina("./data/disciplinas.csv", cadastroDisciplina);
-        LeitorDataBase.lerArqMatricula("./data/matriculas.csv", historicoNotas);
+        // Carrega dados dos arquivos CSV
+        LeitorDataBase.lerArqEstudante("../data/estudantes.csv", listaEstudantes);
+        LeitorDataBase.lerArqDisciplina("../data/disciplinas.csv", cadastroDisciplina);
+        LeitorDataBase.lerArqMatricula("../data/matriculas.csv", historicoNotas);
 
+        // Inicializa os Controllers
         estudanteController = new EstudanteController(listaEstudantes);
         disciplinaController = new DisciplinaController(cadastroDisciplina);
         matriculaController = new MatriculaController(historicoNotas, listaEstudantes, cadastroDisciplina);
 
-        this.listaEstudantes = listaEstudantes;
-        this.cadastroDisciplina = cadastroDisciplina;
-        this.historicoNotas = historicoNotas;
+        // Inicializa o Gerador de Relatório
+        geradorRelatorio = new GeradorRelatorio(listaEstudantes, cadastroDisciplina, historicoNotas);
     }
-
 
     public EstudanteController getEstudanteController() {
         return estudanteController;
@@ -40,5 +42,18 @@ public class MainController {
 
     public MatriculaController getMatriculaController() {
         return matriculaController;
+    }
+
+
+    public boolean gerarRelatorioCompleto() {
+        return geradorRelatorio.gerarRelatorio("output.txt");
+    }
+
+    public boolean gerarRelatorioResumido() {
+        return geradorRelatorio.gerarRelatorioResumido("output_resumido.txt");
+    }
+
+    public boolean gerarRelatorioPersonalizado(String caminho) {
+        return geradorRelatorio.gerarRelatorio(caminho);
     }
 }
