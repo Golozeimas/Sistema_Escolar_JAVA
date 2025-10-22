@@ -1,6 +1,7 @@
 package br.com.projeto_escolar.MVC.Controller;
 
 import br.com.projeto_escolar.MVC.Model.*;
+import java.io.File;
 
 public class MainController {
     private ListaEstudantes listaEstudantes;
@@ -44,16 +45,99 @@ public class MainController {
         return matriculaController;
     }
 
-
+    /*
+     * Gera relatório na RAIZ do projeto (output.txt)
+     * VERSÃO SIMPLIFICADA - SEM PASTA
+     */
     public boolean gerarRelatorioCompleto() {
-        return geradorRelatorio.gerarRelatorio("./joaos/output.txt");
+        try {
+            System.out.println("═══════════════════════════════════════");
+            System.out.println("  GERANDO RELATÓRIO COMPLETO");
+            System.out.println("═══════════════════════════════════════");
+
+            boolean resultado = geradorRelatorio.gerarRelatorio("output.txt");
+
+            if (resultado) {
+                File arquivo = new File("output.txt");
+                System.out.println(" SUCESSO!");
+                System.out.println(" Arquivo: " + arquivo.getName());
+                System.out.println(" Local: " + arquivo.getAbsolutePath());
+                System.out.println("═══════════════════════════════════════");
+            } else {
+                System.out.println(" FALHOU!");
+                System.out.println("═══════════════════════════════════════");
+            }
+
+            return resultado;
+
+        } catch (Exception e) {
+            System.err.println("ERRO CRÍTICO:");
+            e.printStackTrace();
+            return false;
+        }
     }
 
+    /*
+     * Gera relatório resumido na RAIZ (output_resumido.txt)
+     */
     public boolean gerarRelatorioResumido() {
-        return geradorRelatorio.gerarRelatorioResumido("./joaos/output_resumido.txt");
+        try {
+            System.out.println("═══════════════════════════════════════");
+            System.out.println("   GERANDO RELATÓRIO RESUMIDO");
+            System.out.println("═══════════════════════════════════════");
+
+            boolean resultado = geradorRelatorio.gerarRelatorioResumido("output_resumido.txt");
+
+            if (resultado) {
+                File arquivo = new File("output_resumido.txt");
+                System.out.println("SUCESSO!");
+                System.out.println("Arquivo: " + arquivo.getName());
+                System.out.println("Local: " + arquivo.getAbsolutePath());
+                System.out.println("═══════════════════════════════════════");
+            }
+
+            return resultado;
+
+        } catch (Exception e) {
+            System.err.println("ERRO:");
+            e.printStackTrace();
+            return false;
+        }
     }
 
+    /*
+     * Gera relatório em caminho customizado
+     */
     public boolean gerarRelatorioPersonalizado(String caminho) {
-        return geradorRelatorio.gerarRelatorio(caminho);
+        try {
+            System.out.println("═══════════════════════════════════════");
+            System.out.println("GERANDO RELATÓRIO PERSONALIZADO");
+            System.out.println("Caminho: " + caminho);
+            System.out.println("═══════════════════════════════════════");
+
+            // Cria diretórios se necessário
+            File arquivo = new File(caminho);
+            File diretorio = arquivo.getParentFile();
+
+            if (diretorio != null && !diretorio.exists()) {
+                System.out.println("Criando pasta: " + diretorio.getName());
+                diretorio.mkdirs();
+            }
+
+            boolean resultado = geradorRelatorio.gerarRelatorio(caminho);
+
+            if (resultado) {
+                System.out.println("SUCESSO!");
+                System.out.println("Local: " + arquivo.getAbsolutePath());
+                System.out.println("═══════════════════════════════════════");
+            }
+
+            return resultado;
+
+        } catch (Exception e) {
+            System.err.println("ERRO:");
+            e.printStackTrace();
+            return false;
+        }
     }
 }

@@ -1,13 +1,11 @@
 package br.com.projeto_escolar.MVC.Model;
 
-import java.io.BufferedWriter;
 import java.io.FileWriter;
-import java.io.IOException;
+import java.io.PrintWriter;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.List;
-import java.util.Set;
 
+// usa apenas FileWriter e PrintWriter
 public class GeradorRelatorio {
 
     private ListaEstudantes listaEstudantes;
@@ -20,176 +18,189 @@ public class GeradorRelatorio {
         this.historicoNotas = hn;
     }
 
-    /*
-     * Gera o relatório completo em arquivo output.txt
-     * caminhoArquivo caminho onde o arquivo será salvo (ex: "output.txt")
-     * true se gerado com sucesso, false caso contrário
+    /**
+     * Gera o relatório completo
      */
     public boolean gerarRelatorio(String caminhoArquivo) {
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(caminhoArquivo))) {
+        System.out.println("► Iniciando geração do relatório: " + caminhoArquivo);
 
-            // Cabeçalho do relatório
+        PrintWriter writer = null;
+        try {
+            // Abre o arquivo para escrita
+            writer = new PrintWriter(new FileWriter(caminhoArquivo));
+
+            // Escreve o relatório
             escreverCabecalho(writer);
-
-            // Seção 1: Lista de Estudantes
-            escreverListaEstudantes(writer);
-
-            // Seção 2: Lista de Disciplinas
-            escreverListaDisciplinas(writer);
-
-            // Seção 3: Histórico de Notas por Estudante
-            escreverHistoricoNotas(writer);
-
-            // Seção 4: Estatísticas Gerais
+            escreverEstudantes(writer);
+            escreverDisciplinas(writer);
+            escreverHistorico(writer);
             escreverEstatisticas(writer);
-
-            // Seção 5: Ranking Top 3
             escreverRanking(writer);
-
-            // Rodapé
             escreverRodape(writer);
 
+            System.out.println("✓ Relatório gerado com sucesso!");
             return true;
 
-        } catch (IOException e) {
-            System.err.println("Erro ao gerar relatório: " + e.getMessage());
+        } catch (Exception e) {
+            System.err.println("✗ ERRO ao gerar relatório:");
+            System.err.println("  Mensagem: " + e.getMessage());
+            System.err.println("  Classe: " + e.getClass().getName());
             e.printStackTrace();
             return false;
+
+        } finally {
+            if (writer != null) {
+                writer.close();
+            }
         }
     }
 
-    private void escreverCabecalho(BufferedWriter writer) throws IOException {
+    private void escreverCabecalho(PrintWriter w) {
         LocalDateTime agora = LocalDateTime.now();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
 
-        writer.write("================================================================================\n");
-        writer.write("                     SISTEMA DE GERENCIAMENTO ESCOLAR\n");
-        writer.write("                          RELATÓRIO ACADÊMICO\n");
-        writer.write("================================================================================\n");
-        writer.write("Data/Hora: " + agora.format(formatter) + "\n");
-        writer.write("================================================================================\n\n");
+        w.println("================================================================================");
+        w.println("                     SISTEMA DE GERENCIAMENTO ESCOLAR");
+        w.println("                          RELATÓRIO ACADÊMICO");
+        w.println("================================================================================");
+        w.println("Data/Hora: " + agora.format(formatter));
+        w.println("================================================================================");
+        w.println();
     }
 
-    private void escreverListaEstudantes(BufferedWriter writer) throws IOException {
-        writer.write("╔══════════════════════════════════════════════════════════════════════════════╗\n");
-        writer.write("║                           LISTA DE ESTUDANTES                                ║\n");
-        writer.write("╚══════════════════════════════════════════════════════════════════════════════╝\n\n");
+    private void escreverEstudantes(PrintWriter w) {
+        w.println("┌──────────────────────────────────────────────────────────────────────────────┐");
+        w.println("│                           LISTA DE ESTUDANTES                                │");
+        w.println("└──────────────────────────────────────────────────────────────────────────────┘");
+        w.println();
 
-        List<Estudante> estudantes = listaEstudantes.obterTodos();
+        var estudantes = listaEstudantes.obterTodos();
 
         if (estudantes.isEmpty()) {
-            writer.write("   Nenhum estudante cadastrado.\n\n");
+            w.println("   Nenhum estudante cadastrado.");
         } else {
-            writer.write(String.format("%-10s | %-50s\n", "ID", "NOME"));
-            writer.write("-----------|----------------------------------------------------\n");
+            w.println(String.format("%-10s | %-50s", "ID", "NOME"));
+            w.println("-----------|----------------------------------------------------");
 
-            for (Estudante e : estudantes) {
-                writer.write(String.format("%-10d | %-50s\n", e.getId(), e.getNome()));
+            for (var e : estudantes) {
+                w.println(String.format("%-10d | %-50s", e.getId(), e.getNome()));
             }
 
-            writer.write("\nTotal de estudantes: " + estudantes.size() + "\n\n");
+            w.println();
+            w.println("Total de estudantes: " + estudantes.size());
         }
+        w.println();
     }
 
-    private void escreverListaDisciplinas(BufferedWriter writer) throws IOException {
-        writer.write("╔══════════════════════════════════════════════════════════════════════════════╗\n");
-        writer.write("║                          LISTA DE DISCIPLINAS                                ║\n");
-        writer.write("╚══════════════════════════════════════════════════════════════════════════════╝\n\n");
+    private void escreverDisciplinas(PrintWriter w) {
+        w.println("┌──────────────────────────────────────────────────────────────────────────────┐");
+        w.println("│                          LISTA DE DISCIPLINAS                                │");
+        w.println("└──────────────────────────────────────────────────────────────────────────────┘");
+        w.println();
 
-        Set<Disciplina> disciplinas = cadastroDisciplina.obterTodasDisciplinas();
+        var disciplinas = cadastroDisciplina.obterTodasDisciplinas();
 
         if (disciplinas.isEmpty()) {
-            writer.write("   Nenhuma disciplina cadastrada.\n\n");
+            w.println("   Nenhuma disciplina cadastrada.");
         } else {
-            writer.write(String.format("%-15s | %-50s\n", "CÓDIGO", "NOME DA DISCIPLINA"));
-            writer.write("----------------|----------------------------------------------------\n");
+            w.println(String.format("%-15s | %-50s", "CÓDIGO", "NOME DA DISCIPLINA"));
+            w.println("----------------|----------------------------------------------------");
 
-            for (Disciplina d : disciplinas) {
-                writer.write(String.format("%-15s | %-50s\n", d.getCodigo(), d.getNomeDisciplina()));
+            for (var d : disciplinas) {
+                w.println(String.format("%-15s | %-50s", d.getCodigo(), d.getNomeDisciplina()));
             }
 
-            writer.write("\nTotal de disciplinas: " + disciplinas.size() + "\n\n");
+            w.println();
+            w.println("Total de disciplinas: " + disciplinas.size());
         }
+        w.println();
     }
 
-    private void escreverHistoricoNotas(BufferedWriter writer) throws IOException {
-        writer.write("╔══════════════════════════════════════════════════════════════════════════════╗\n");
-        writer.write("║                    HISTÓRICO DE NOTAS POR ESTUDANTE                          ║\n");
-        writer.write("╚══════════════════════════════════════════════════════════════════════════════╝\n\n");
+    private void escreverHistorico(PrintWriter w) {
+        w.println("┌──────────────────────────────────────────────────────────────────────────────┐");
+        w.println("│                    HISTÓRICO DE NOTAS POR ESTUDANTE                          │");
+        w.println("└──────────────────────────────────────────────────────────────────────────────┘");
+        w.println();
 
-        List<Estudante> estudantes = listaEstudantes.obterTodos();
+        var estudantes = listaEstudantes.obterTodos();
 
         if (estudantes.isEmpty()) {
-            writer.write("   Nenhum estudante cadastrado.\n\n");
+            w.println("   Nenhum estudante cadastrado.");
+            w.println();
             return;
         }
 
-        for (Estudante estudante : estudantes) {
-            writer.write("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n");
-            writer.write(String.format("  ESTUDANTE: %s (ID: %d)\n", estudante.getNome(), estudante.getId()));
-            writer.write("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n");
+        for (var estudante : estudantes) {
+            w.println("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
+            w.println(String.format("  ESTUDANTE: %s (ID: %d)", estudante.getNome(), estudante.getId()));
+            w.println("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
 
-            List<Matricula> matriculas = historicoNotas.obteMatriculas(estudante.getId());
+            var matriculas = historicoNotas.obteMatriculas(estudante.getId());
 
             if (matriculas.isEmpty()) {
-                writer.write("   → Nenhuma matrícula registrada.\n\n");
+                w.println("   → Nenhuma matrícula registrada.");
             } else {
-                writer.write(String.format("   %-20s | %-10s\n", "DISCIPLINA", "NOTA"));
-                writer.write("   ---------------------|------------\n");
+                w.println(String.format("   %-20s | %-10s", "DISCIPLINA", "NOTA"));
+                w.println("   ---------------------|------------");
 
-                for (Matricula m : matriculas) {
-                    writer.write(String.format("   %-20s | %10.2f\n", m.getCodigoDisciplina(), m.getNota()));
+                for (var m : matriculas) {
+                    w.println(String.format("   %-20s | %10.2f", m.getCodigoDisciplina(), m.getNota()));
                 }
 
                 double media = historicoNotas.mediaDoEstudante(estudante.getId());
-                writer.write("   ────────────────────────────────\n");
-                writer.write(String.format("   MÉDIA GERAL:           %10.2f\n\n", media));
+                w.println("   ────────────────────────────────");
+                w.println(String.format("   MÉDIA GERAL:           %10.2f", media));
             }
+            w.println();
         }
     }
 
-    private void escreverEstatisticas(BufferedWriter writer) throws IOException {
-        writer.write("╔══════════════════════════════════════════════════════════════════════════════╗\n");
-        writer.write("║                         ESTATÍSTICAS POR DISCIPLINA                          ║\n");
-        writer.write("╚══════════════════════════════════════════════════════════════════════════════╝\n\n");
+    private void escreverEstatisticas(PrintWriter w) {
+        w.println("┌──────────────────────────────────────────────────────────────────────────────┐");
+        w.println("│                         ESTATÍSTICAS POR DISCIPLINA                          │");
+        w.println("└──────────────────────────────────────────────────────────────────────────────┘");
+        w.println();
 
-        Set<Disciplina> disciplinas = cadastroDisciplina.obterTodasDisciplinas();
+        var disciplinas = cadastroDisciplina.obterTodasDisciplinas();
 
         if (disciplinas.isEmpty()) {
-            writer.write("   Nenhuma disciplina cadastrada.\n\n");
+            w.println("   Nenhuma disciplina cadastrada.");
+            w.println();
             return;
         }
 
-        writer.write(String.format("%-20s | %-40s | %-10s\n", "CÓDIGO", "DISCIPLINA", "MÉDIA"));
-        writer.write("---------------------|------------------------------------------|------------\n");
+        w.println(String.format("%-20s | %-40s | %-10s", "CÓDIGO", "DISCIPLINA", "MÉDIA"));
+        w.println("---------------------|------------------------------------------|------------");
 
-        for (Disciplina d : disciplinas) {
+        for (var d : disciplinas) {
             double media = historicoNotas.mediaDaDisciplina(d.getCodigo());
-            writer.write(String.format("%-20s | %-40s | %10.2f\n",
+            w.println(String.format("%-20s | %-40s | %10.2f",
                     d.getCodigo(),
                     d.getNomeDisciplina(),
                     media));
         }
-        writer.write("\n");
+        w.println();
     }
 
-    private void escreverRanking(BufferedWriter writer) throws IOException {
-        writer.write("╔══════════════════════════════════════════════════════════════════════════════╗\n");
-        writer.write("║                        TOP 3 MELHORES ESTUDANTES                             ║\n");
-        writer.write("╚══════════════════════════════════════════════════════════════════════════════╝\n\n");
+    private void escreverRanking(PrintWriter w) {
+        w.println("┌──────────────────────────────────────────────────────────────────────────────┐");
+        w.println("│                        TOP 3 MELHORES ESTUDANTES                             │");
+        w.println("└──────────────────────────────────────────────────────────────────────────────┘");
+        w.println();
 
-        List<Estudante> top3 = historicoNotas.topNEstudantesPorMedia(3);
+        var top3 = historicoNotas.topNEstudantesPorMedia(3);
 
         if (top3.isEmpty()) {
-            writer.write("   Nenhum estudante com notas registradas.\n\n");
+            w.println("   Nenhum estudante com notas registradas.");
+            w.println();
             return;
         }
 
-        writer.write(String.format("%-10s | %-10s | %-40s | %-10s\n", "POSIÇÃO", "ID", "NOME", "MÉDIA"));
-        writer.write("-----------|------------|------------------------------------------|------------\n");
+        w.println(String.format("%-10s | %-10s | %-40s | %-10s", "POSIÇÃO", "ID", "NOME", "MÉDIA"));
+        w.println("-----------|------------|------------------------------------------|------------");
 
         int posicao = 1;
-        for (Estudante e : top3) {
+        for (var e : top3) {
             double media = historicoNotas.mediaDoEstudante(e.getId());
 
             String medalha = "";
@@ -197,7 +208,7 @@ public class GeradorRelatorio {
             else if (posicao == 2) medalha = "🥈";
             else if (posicao == 3) medalha = "🥉";
 
-            writer.write(String.format("%-10s | %-10d | %-40s | %10.2f\n",
+            w.println(String.format("%-10s | %-10d | %-40s | %10.2f",
                     posicao + "º " + medalha,
                     e.getId(),
                     e.getNome(),
@@ -205,42 +216,55 @@ public class GeradorRelatorio {
 
             posicao++;
         }
-        writer.write("\n");
+        w.println();
     }
 
-    private void escreverRodape(BufferedWriter writer) throws IOException {
-        writer.write("================================================================================\n");
-        writer.write("                         FIM DO RELATÓRIO\n");
-        writer.write("           Sistema de Gerenciamento Escolar - Versão 1.0\n");
-        writer.write("================================================================================\n");
+    private void escreverRodape(PrintWriter w) {
+        w.println("================================================================================");
+        w.println("                         FIM DO RELATÓRIO");
+        w.println("           Sistema de Gerenciamento Escolar - Versão 1.0");
+        w.println("================================================================================");
     }
 
-    /*
+    /**
      * Gera um relatório resumido (apenas estatísticas principais)
      */
     public boolean gerarRelatorioResumido(String caminhoArquivo) {
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(caminhoArquivo))) {
+        System.out.println("► Iniciando geração do relatório resumido: " + caminhoArquivo);
+
+        PrintWriter writer = null;
+        try {
+            writer = new PrintWriter(new FileWriter(caminhoArquivo));
 
             escreverCabecalho(writer);
 
-            writer.write("╔══════════════════════════════════════════════════════════════════════════════╗\n");
-            writer.write("║                           RESUMO ESTATÍSTICO                                 ║\n");
-            writer.write("╚══════════════════════════════════════════════════════════════════════════════╝\n\n");
+            writer.println("┌──────────────────────────────────────────────────────────────────────────────┐");
+            writer.println("│                           RESUMO ESTATÍSTICO                                 │");
+            writer.println("└──────────────────────────────────────────────────────────────────────────────┘");
+            writer.println();
 
-            List<Estudante> estudantes = listaEstudantes.obterTodos();
-            Set<Disciplina> disciplinas = cadastroDisciplina.obterTodasDisciplinas();
+            var estudantes = listaEstudantes.obterTodos();
+            var disciplinas = cadastroDisciplina.obterTodasDisciplinas();
 
-            writer.write("Total de Estudantes Cadastrados: " + estudantes.size() + "\n");
-            writer.write("Total de Disciplinas Cadastradas: " + disciplinas.size() + "\n\n");
+            writer.println("Total de Estudantes Cadastrados: " + estudantes.size());
+            writer.println("Total de Disciplinas Cadastradas: " + disciplinas.size());
+            writer.println();
 
             escreverRanking(writer);
             escreverRodape(writer);
 
+            System.out.println("✓ Relatório resumido gerado com sucesso!");
             return true;
 
-        } catch (IOException e) {
-            System.err.println("Erro ao gerar relatório resumido: " + e.getMessage());
+        } catch (Exception e) {
+            System.err.println("✗ ERRO ao gerar relatório resumido:");
+            e.printStackTrace();
             return false;
+
+        } finally {
+            if (writer != null) {
+                writer.close();
+            }
         }
     }
 }
